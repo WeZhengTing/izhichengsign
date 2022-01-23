@@ -1,10 +1,9 @@
 import re
-
+from urllib import parse
 from time import strftime,gmtime
 import requests
-def izhichen():
-    userno='212106780'
-    username='%E7%BF%81%E9%93%AD'
+def izhichen(userno,name):#userno是学号，name是你的名字
+    username = parse.quote(name)
     nowtime = strftime('%Y'+'-'+'%m'+'-'+'%d')+'%2000%3A00%3A01'
     urlse = 'http://dw10.fdzcxy.edu.cn/datawarn/ReportServer?formlet=app/sjkrb.frm&op=h5&userno='+userno+'&token=eyJhbGciOiJSUzUxMiJ9.eyJBVFRSX3VzZXJObyI6IjIxMjEwNjYxOSIsInN1YiI6IjIxMjEwNjYxOSIsImlzcyI6InRva2VuLmZkemN4eS5lZHUuY24iLCJkZXZpY2VJZCI6Ilh0NHBtQW1EdnB3REFJQlBRY2F1UHhDSyIsIkFUVFJfaWRlbnRpdHlUeXBlSWQiOiJhNGFlNWIyMGZmNjIxMWViYjIzMTI1ZDkyY2RlZjNkNSIsIkFUVFJfYWNjb3VudElkIjoiYTJhYjNhNTBmZjcxMTFlYmM4YWNmYWIwOTY2ZjU0NTYiLCJBVFRSX3VzZXJJZCI6ImEyOWM5NDUwZmY3MTExZWJjOGFjZmFiMDk2NmY1NDU2IiwiQVRUUl9pZGVudGl0eVR5cGVDb2RlIjoiUzIwMjEiLCJBVFRSX2lkZW50aXR5VHlwZU5hbWUiOiIyMDIx57qn5a2m55SfIiwiQVRUUl9vcmdhbml6YXRpb25OYW1lIjoi6K6h566X5py65bel56iL57O7IiwiQVRUUl91c2VyTmFtZSI6Iuael-eri-ixqiIsImV4cCI6MTY0MzEyNzA0NCwiQVRUUl9vcmdhbml6YXRpb25JZCI6IjIxMzA3MDAwIiwiaWF0IjoxNjQwNTM1MDQ0LCJqdGkiOiJJZC1Ub2tlbi1Sb0xvTFJMSXJzcmdIZWZ6IiwicmVxIjoiY29tLmxhbnR1Lk1vYmlsZUNhbXB1cy56Y3h5IiwiQVRUUl9vcmdhbml6YXRpb25Db2RlIjoiMjEzMDcwMDAifQ.V2UvL6RuNRpd7aRRB6o26-rXYdl8iNwGFM4mtcthY4CVTUkM2__A6V6KOdm-qRCxoiVrMYnd4EzbVAWti6AlC0coIEjggWfUaJdRRowQndOLL0Y13xOnjh_hcTMUAIeYiXDa9UUBhuBa-e5PChbra0QBSatW684d4y6eDIn4MtU#/form'
     resse = requests.get(urlse)
@@ -32,5 +31,3 @@ def izhichen():
     request=requests.post(url,data=data,headers=headers)
     print(request.text)
     print("提交完毕")
-
-izhichen()
