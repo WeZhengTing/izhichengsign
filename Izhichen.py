@@ -31,3 +31,5 @@ def izhichen(userno,name):#userno是学号，name是你的名字
     request=requests.post(url,data=data,headers=headers)
     print(request.text)
     print("提交完毕")
+    
+ izhichen(212104127,苏睿宁)
