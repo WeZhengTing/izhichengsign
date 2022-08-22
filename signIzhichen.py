@@ -9,8 +9,8 @@ class Mail:
 
         self.mail_host="smtp.qq.com"       #设置服务器:这个是qq邮箱服务器，直接复制就可以
         self.mail_pass="spuhpmjvmikjdgij"           #刚才我们获取的授权码
-        self.sender = '@qq.com'      #你的邮箱地址
-        self.receivers = ['@qq.com']  # 收件人的邮箱地址
+        self.sender = '2946073318@qq.com'      #你的邮箱地址
+        self.receivers = ['3014829930@qq.com']  # 收件人的邮箱地址
 
     def send(self):
 
@@ -27,7 +27,7 @@ class Mail:
             smtpObj.login(self.sender, self.mail_pass)
             smtpObj.sendmail(self.sender, self.receivers, message.as_string())
             smtpObj.quit()
-            izhichen('211816452','李白')
+            izhichen('212104127','苏睿宁')
             print("OK滚去睡觉吧")
         except smtplib.SMTPException as e:
             print("快自己起床签到")
