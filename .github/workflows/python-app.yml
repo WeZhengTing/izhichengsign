@@ -12,7 +12,7 @@ on:
   schedule:
   # 定时任务
   #每天00.30执行
-    - cron: '15 17 * * *'
+    - cron: '20 17 * * *'
 
 
 
@@ -40,7 +40,10 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
+      
         chmod -R 777 ./Izhichen.py
         python -m pip install --upgrade pip
         python -m pip install pytz requests datetime
+        python -m pip install urllib
+        python -m pip install time
         ./Izhichen.py
