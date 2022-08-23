@@ -34,6 +34,5 @@ def izhichen(userno, name):
     request = requests.post(url, data=data, headers=headers)
     print(request.text)
     print("提交完毕")
-
-  if __name__ == '__main__':
+if __name__ == '__main__':
     izhichen('212104127','苏睿宁')
