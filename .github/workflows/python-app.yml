@@ -44,7 +44,5 @@ jobs:
         chmod -R 777 ./Izhichen.py
         python -m pip install typing_extensions
         python -m pip install --upgrade pip
-        python -m pip install pytz requests datetime
         python -m pip install urllib3==1.23
-        python -m pip install pytz requests time
         ./Izhichen.py
