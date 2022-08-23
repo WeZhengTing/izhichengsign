@@ -1,8 +1,9 @@
 #!/usr/bin/env python
+import requests
 import re
 from urllib import parse
 from time import strftime, gmtime
-import requests
+
 def izhichen(userno, name):
     username = parse.quote(name)
     nowtime = strftime('%Y' + '-' + '%m' + '-' + '%d') + '%2000%3A01%3A03'
