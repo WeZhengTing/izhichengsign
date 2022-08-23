@@ -1,3 +1,7 @@
+# -*- coding = utf-8 -*-
+# @File : izhicheng.py
+# @Software: PyCharm
+
 import requests
 import re
 from urllib import parse
@@ -30,4 +34,6 @@ def izhichen(userno, name):
     request = requests.post(url, data=data, headers=headers)
     print(request.text)
     print("提交完毕")
-izhichen('212104127','苏睿宁')
+
+  if __name__ == '__main__':
+    izhichen('212104127','苏睿宁')
