@@ -1,7 +1,7 @@
+#!/usr/bin/env python
 # -*- coding = utf-8 -*-
 # @File : izhicheng.py
 # @Software: PyCharm
-
 import requests
 import re
 from urllib import parse
