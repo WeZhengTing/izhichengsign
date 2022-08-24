@@ -8,9 +8,9 @@ class Mail:
         # 第三方 SMTP 服务
 
         self.mail_host="smtp.qq.com"       #设置服务器:这个是qq邮箱服务器，直接复制就可以
-        self.mail_pass="spuhpmjvmikjdgij"           #刚才我们获取的授权码
-        self.sender = '2946073318@qq.com'      #你的邮箱地址
-        self.receivers = ['3014829930@qq.com']  # 收件人的邮箱地址
+        self.mail_pass=""           #刚才我们获取的授权码
+        self.sender = '@qq.com'      #你的邮箱地址
+        self.receivers = ['@qq.com']  # 收件人的邮箱地址
 
     def send(self):
 
